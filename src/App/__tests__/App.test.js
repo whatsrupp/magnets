@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import { configure, render, shallow} from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { render, shallow} from 'enzyme';
 import renderer from 'react-test-renderer';
 import App from '../App'
 
-configure({ adapter: new Adapter() });
 
 describe('<App />', ()=>{
 

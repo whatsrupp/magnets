@@ -3,14 +3,33 @@
 exports[`<Sidebar /> renders 1`] = `
 initialize {
   "0": Object {
-    "attribs": Object {},
+    "attribs": Object {
+      "class": "Sidebar",
+    },
     "children": Array [
       Object {
-        "data": "Hi",
+        "attribs": Object {
+          "alt": "logo",
+          "class": "Sidebar-logo",
+          "src": "magnet.svg",
+        },
+        "children": Array [],
+        "name": "img",
+        "namespace": "http://www.w3.org/1999/xhtml",
         "next": null,
         "parent": [Circular],
         "prev": null,
-        "type": "text",
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "alt": undefined,
+          "class": undefined,
+          "src": undefined,
+        },
+        "x-attribsPrefix": Object {
+          "alt": undefined,
+          "class": undefined,
+          "src": undefined,
+        },
       },
     ],
     "name": "div",
@@ -33,8 +52,12 @@ initialize {
       "x-attribsPrefix": Object {},
     },
     "type": "tag",
-    "x-attribsNamespace": Object {},
-    "x-attribsPrefix": Object {},
+    "x-attribsNamespace": Object {
+      "class": undefined,
+    },
+    "x-attribsPrefix": Object {
+      "class": undefined,
+    },
   },
   "_root": [Circular],
   "length": 1,
