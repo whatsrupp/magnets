@@ -1,12 +1,56 @@
 .Sidebar {
-    width: 100%;
-    display: flex;
-	justify-content: center;
+    width: 200px;
+	justify-content: flex-start;
 	align-items: center;
-	flex-direction: column;
+    flex-direction: column;
+    position: fixed;
+    padding: 10px;
+    background-color: hotpink;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.Sidebar__header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+@keyframes icon-spin {
+    0% {transform: rotate(0deg)}
+    25% {transform: rotate(-12deg)}
+    50% {transform: rotate(12deg)}
+    75% {transform: rotate(-6deg)}
+    100% {transform: rotate(0deg)}
 }
 
 .Sidebar__Logo {
     width: 100%;
-    max-width: 200px;
+    max-width: 100px;
+}
+
+.Sidebar__Logo--animated{
+    animation: icon-spin;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+.Sidebar__Logo:hover {
+    cursor: pointer;
+}
+
+.Sidebar__title {
+    user-select: none;
+    font-family: 'Courier New', Courier, monospace
+}
+
+.Sidebar__posts{
+    width: 100%;
+
+}
+
+.Sidebar__subtitle{
+    border-bottom: 1px solid black;
+    margin-bottom: 0px;
 }

@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './SidebarEntry.css'
 import PropTypes from 'prop-types'
+
 class SidebarEntry extends Component {
+
     render(){
         return(
             <div className="SidebarEntry">
-                <h1>{this.props.title} </h1>
-                <p>{this.props.summary}</p>
+                <h1 className="SidebarEntry__title">{this.props.title} </h1>
+                <p className="SidebarEntry__summary">{this.props.summary}...</p>
             </div>
         )
     }

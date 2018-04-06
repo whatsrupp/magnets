@@ -1,0 +1,27 @@
+.SidebarEntry__title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: blanchedalmond;
+    font-size: 1em;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.SidebarEntry {
+    border-bottom: 1px solid black;
+    padding: 4px 10px;
+    padding-left: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.SidebarEntry:hover {
+    background-color: lightsalmon;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.SidebarEntry__summary{
+    font-style: italic;
+    font-size: 0.8em;
+    margin-top: 3px;
+}
