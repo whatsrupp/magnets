@@ -35,6 +35,10 @@ class Sidebar extends Component {
         <div className="Sidebar__posts">
           <h2 className="Sidebar__subtitle">Posts</h2>
           <SidebarEntry />   
+          <SidebarEntry />   
+          <SidebarEntry />   
+          <SidebarEntry />   
+          <SidebarEntry />   
         </div>
       </div>
     )

@@ -1,0 +1,7 @@
+.Viewport{
+    position: fixed;
+    left: 200px;
+    right: 0px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2) inset, 0 6px 20px 0 rgba(0,0,0,0.19) inset;
+    min-height: 100%
+}

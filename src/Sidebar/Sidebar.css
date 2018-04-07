@@ -4,10 +4,11 @@
 	align-items: center;
     flex-direction: column;
     position: fixed;
-    padding: 10px;
     background-color: hotpink;
+    padding-top: 10px;
     height: 100vh;
     overflow-y: scroll;
+    box-sizing: border-box;
 }
 
 .Sidebar__header{
@@ -52,5 +53,6 @@
 
 .Sidebar__subtitle{
     border-bottom: 1px solid black;
-    margin-bottom: 0px;
+    margin-bottom: 0px; 
+    padding: 10px;
 }
