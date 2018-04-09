@@ -1,11 +1,8 @@
 .PostsForm{
-    box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     padding: 20px;
-    margin: 20px;
-    
+    height: 100%;
     border-radius: 5px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2) , 0 6px 20px 0 rgba(0,0,0,0.19) ;
 }
@@ -20,6 +17,7 @@
 .PostsForm__contents-group{
     flex-direction: column;
     border-bottom: 0px;
+    flex-grow: 10;
 }
 
 
@@ -44,6 +42,7 @@
     width: 100px;
     border: 1px solid;
     border-radius: 2px;
+    max-height: 20px;
    
 }
 
@@ -59,8 +58,10 @@
 }
 
 .PostsForm__controls{
+    flex-grow: 1;
     display: flex;
     flex-basis: fill;
     justify-content: flex-end;
+    align-items: flex-end;
     padding-top: 10px;
 }
