@@ -4,8 +4,7 @@
 	align-items: center;
     flex-direction: column;
     position: fixed;
-    /* background-color: #FD7CB9; */
-    background-color: blue;
+    background-color: #5C70E1;
     padding-top: 10px;
     height: 100vh;
     overflow-y: scroll;

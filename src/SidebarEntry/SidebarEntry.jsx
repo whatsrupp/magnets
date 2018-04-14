@@ -5,10 +5,11 @@ import PropTypes from 'prop-types'
 class SidebarEntry extends Component {
 
     render(){
+        console.log(this.props)
         return(
             <div className="SidebarEntry">
                 <h1 className="SidebarEntry__title">{this.props.title} </h1>
-                <p className="SidebarEntry__summary">{this.props.summary}...</p>
+                <p className="SidebarEntry__summary">{this.props.content}...</p>
             </div>
         )
     }
@@ -16,11 +17,11 @@ class SidebarEntry extends Component {
 
 SidebarEntry.defaultProps = {
     title: 'Untitled Post',
-    summary: 'No Summary'
+    content: 'No Summary'
 }
 
 SidebarEntry.prototypes = {
     title: PropTypes.string,
-    summary: PropTypes.string
+    content: PropTypes.string
 }
 export default SidebarEntry

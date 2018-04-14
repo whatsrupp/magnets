@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import logo from './magnet.svg'
 import './Sidebar.css';
 import SidebarEntry from 'SidebarEntry/SidebarEntry';
+import {graphql} from 'react-apollo';
+import getPostsQuery from './SidebarGQL'
+
 class Sidebar extends Component {
 
   constructor(props){
@@ -19,6 +22,22 @@ class Sidebar extends Component {
     })
   }
 
+  renderPosts(){
+    const { posts, loading } = this.props.data;
+    if(!loading ){
+      return posts.map((post)=>{
+        return (
+          <SidebarEntry 
+            title={post.title}
+            content={post.content}
+            key={post._id}
+          />
+        )
+      })
+    }
+
+  }
+
   render(){
 
     return(
@@ -34,15 +53,12 @@ class Sidebar extends Component {
         </div>
         <div className="Sidebar__posts">
           <h2 className="Sidebar__subtitle">Posts</h2>
-          <SidebarEntry />   
-          <SidebarEntry />   
-          <SidebarEntry />   
-          <SidebarEntry />   
-          <SidebarEntry />   
+          {this.renderPosts()}
         </div>
       </div>
     )
   }
 }
 
-export default Sidebar
+
+export default graphql(getPostsQuery)(Sidebar);
