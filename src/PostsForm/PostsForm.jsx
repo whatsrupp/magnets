@@ -1,27 +1,35 @@
 import React, { Component } from 'react'
 import './PostsForm.css'
+import {graphql} from 'react-apollo';
+import {createPostMutation, createPostOptions } from './postFormGQL'
 
 class PostsForm extends Component {
     constructor(props){
         super(props)
         this.state = {
             title: '',
-            contents: ''
+            content: ''
         }
         this.handleTitleChange = this.handleTitleChange.bind(this);
         this.handleContentsChange = this.handleContentsChange.bind(this);
-
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     handleTitleChange(event) {
         this.setState({title: event.target.value});
     }
     handleContentsChange(event) {
-        this.setState({contents: event.target.value});
+        this.setState({content: event.target.value});
     }
 
     handleSubmit(event) {
         event.preventDefault()
+        this.props.mutate({
+            variables: {
+                title: this.state.title,
+                content: this.state.content,
+            }
+        })
     }
 
     render(){
@@ -47,4 +55,6 @@ class PostsForm extends Component {
     }
 }
 
-export default PostsForm
+export default graphql(
+    createPostMutation,createPostOptions
+)(PostsForm)
