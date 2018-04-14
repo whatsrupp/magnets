@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 class SidebarEntry extends Component {
 
     render(){
-        console.log(this.props)
         return(
             <div className="SidebarEntry">
                 <h1 className="SidebarEntry__title">{this.props.title} </h1>
